@@ -1,0 +1,7 @@
+name: cwltutorial
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - cwltool
+  - graphviz
