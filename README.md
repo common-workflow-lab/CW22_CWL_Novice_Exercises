@@ -1,11 +1,11 @@
-# CWL Novice tutorial template
+# CW22 CWL Novice Template
 
-CWL Template for the [CWL Novice tutorial](https://carpentries-incubator.github.io/cwl-novice-tutorial/index.html).
+CWL Template for the [Collaborations Workshop 2022 CWL Tutorial](https://software.ac.uk/cw22/mini-workshops-and-demo-sessions#2.4b).
 
-This template contains some of the scripts used in the tutorial. 
+This template contains scripts for use in the tutorial. 
 It also contains instructions for installing the bio-cwl-tools library.
 
-Before following the tutorial you will need to install [VSCode](https://code.visualstudio.com/), [docker](https://www.docker.com/), and [cwltool](https://github.com/common-workflow-language/cwltool). You will also need a working python installation, and either `pip` or `conda`. See the course [Setup page](https://carpentries-incubator.github.io/cwl-novice-tutorial/setup.html) for more details.
+Before following the tutorial you should follow the software installation instructions in the CWL Tutorial [Setup page](https://carpentries-incubator.github.io/cwl-novice-tutorial/setup.html).
 
  
 #### Setup Instructions
@@ -21,19 +21,18 @@ This repository can be cloned directly to your computer, or the template can be 
 ##### 2. Cloning direct from this repository
 
 1. Clone the repository locally, using `git clone --recursive https://github.com/common-workflow-lab/cwl-novice-tutorial-data.git`
-   
 
-#### CWLTool and Graphviz Install Instructions
+##### 3. Downloading input files
 
-`cwltool` and `graphviz` can be installed using the included conda environment file:
-```
-conda env create --file cwltutorial.yml
-```
-To activate the conda environment for these once they are installed use:
-```
-conda activate cwltutorial
-```
+1. The required input files can be downloaded by running `bash download_inputs.sh`. This will create the directory `rnaseq`, and download the files `GSM461177_1_subsampled.fastqsanger` and `GSM461177_2_subsampled.fastqsanger`.
 
-If you do not wish to use conda to install these then alternative install instructions 
-are included on the course [Setup page](https://carpentries-incubator.github.io/cwl-novice-tutorial/setup.html).
+#### Workshop Instructions
+
+There are two workflows in the repository, `1_Single_step_workflow.cwl` and `2_Multi_step_workflow.cwl`. These can be run using the commands:
+1. `cwltool 1_Single_step_workflow.cwl workflow_input.yml`
+2. `cwltool 2_Multi_step_workflow.cwl workflow_input.yml`
+
+The scripts need completing - replace the blocks indicated by `< >` with the appropriate code.
+
+
 
