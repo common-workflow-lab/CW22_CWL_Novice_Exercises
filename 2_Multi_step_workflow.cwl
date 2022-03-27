@@ -31,7 +31,7 @@ steps:
       qc_files_array:
         - <step name>/<output variable>
         - <step name>/<output variable>
-    out: [multiqc_html]
+    out: [<html output - check tool descriptor>]
     
 outputs:
   report:
