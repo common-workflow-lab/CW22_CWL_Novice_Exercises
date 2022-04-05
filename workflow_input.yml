@@ -1,0 +1,8 @@
+rna_reads_forward:
+  class: File
+  location: rnaseq/GSM461177_1_subsampled.fastqsanger
+  format: https://edamontology.org/format_1930  # FASTQ
+rna_reads_reverse:
+  class: File
+  location: rnaseq/GSM461177_2_subsampled.fastqsanger
+  format: https://edamontology.org/format_1930  # FASTQ
