@@ -10,21 +10,25 @@ Before following the tutorial you should follow the software installation instru
  
 #### Setup Instructions
 
-This repository can be cloned directly to your computer, or the template can be used to create a new git repository, for you to store the scripts that you create during the tutorial for later reference. The steps for the two options are listed below. In each option the `--recursive` flag is used when cloning the repository locally. This automatically loads the bio-cwl-tools library too, using `git submodules`.
+This repository template can be used to create a new git repository, for you to store the 
+scripts that you create during the tutorial for later reference. The steps for doing this  
+are listed below. The `--recursive` flag is used when cloning the repository locally, 
+which will automatically load the bio-cwl-tools library too, using `git submodules`.
 
 ##### 1. Creating your own github repository
 
-1. Click the `Use this template` button, and create a new repository on github as you would usually
-   * Before the next step you can, if you wish, copy this repository to a different git service (such as [gitlab](https://gitlab.com/)).  
-2. Clone the repository locally, using `git clone --recursive [template address]` (the `[template address]` can be got from the `Code` button at the top of the page)
+Click the `Use this template` button, and create a new repository on github as you would usually.
+
+##### 2. Clone the repository locally
+
+Clone the repository locally, using `git clone --recursive [template address]` (the `[template address]` can be got from the `Code` button at the top of the page).
    
-##### 2. Cloning direct from this repository
-
-1. Clone the repository locally, using `git clone --recursive https://github.com/common-workflow-lab/cwl-novice-tutorial-data.git`
-
 ##### 3. Downloading input files
 
-1. The required input files can be downloaded by running `bash download_inputs.sh`. This will create the directory `rnaseq`, and download the files `GSM461177_1_subsampled.fastqsanger` and `GSM461177_2_subsampled.fastqsanger`.
+The required input files can be downloaded by running `bash download_inputs.sh`. This will 
+create the directory `rnaseq`, and download the files `GSM461177_1_subsampled.fastqsanger` 
+and `GSM461177_2_subsampled.fastqsanger`. Note that these files are each 136Mb large, so 
+will take a few minutes to download, depending on your internet connection speed. 
 
 #### Workshop Instructions
 
@@ -32,7 +36,10 @@ There are two workflows in the repository, `1_Single_step_workflow.cwl` and `2_M
 1. `cwltool 1_Single_step_workflow.cwl workflow_input.yml`
 2. `cwltool 2_Multi_step_workflow.cwl workflow_input.yml`
 
-The scripts need completing - replace the blocks indicated by `< >` with the appropriate code.
+The scripts need to be completed before being run - replace the blocks indicated by `< >` 
+with the appropriate code. Working examples of these scripts are provided in the 
+`CWL_Script_Solutions` directory (note that you will have to copy these to the base 
+directory to run though, so that the tool paths are correct).
 
 
 
