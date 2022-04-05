@@ -18,12 +18,13 @@ steps:
     run: bio-cwl-tools/fastqc/fastqc_2.cwl
     in:
       reads_file: <input file>
-    out: [zipped_file]
+    out: [<zipped output - check tool descriptor>]
 
   quality_control_reverse:
-    run: <tool descriptor>
-    in: <input variable>
-    out: <output array>
+    run: bio-cwl-tools/fastqc/fastqc_2.cwl
+    in:
+      reads_file: <input file>
+    out: [<zipped output - check tool descriptor>]
 
   combine_reports:
     run: bio-cwl-tools/multiqc/multiqc.cwl
@@ -34,6 +35,6 @@ steps:
     out: [<html output - check tool descriptor>]
     
 outputs:
-  report:
-    type: <output type>
-    outputSource: <output source>
+  combined_quality_report:
+    type: File
+    outputSource: <step name>/<output variable>

@@ -35,6 +35,6 @@ steps:
     out: [multiqc_html]
     
 outputs:
-  report:
+  combined_quality_report:
     type: File
     outputSource: combine_reports/multiqc_html
